@@ -1,0 +1,40 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tools repo
+        uses: actions/checkout@v3
+
+      - name: Install node environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install PNPM
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Create .env file
+        run: echo "${{ secrets.VITE_GIPHY_API_KEY }}" > .env
+
+      - name: Build
+        run: pnpm build
+
+      - name: SSH deploy
+        uses: easingthemes/ssh-deploy@v3
+        env:
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          TARGET: ${{ secrets.SSH_TARGET }}
+          REMOTE_USER: 'root'
+          SOURCE: 'dist'
+          ARGS: '-avzr --delete'
