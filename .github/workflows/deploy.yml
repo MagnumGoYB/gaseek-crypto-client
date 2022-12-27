@@ -24,7 +24,7 @@ jobs:
         run: pnpm install
 
       - name: Create .env file
-        run: echo "${{ secrets.VITE_GIPHY_API_KEY }}" > .env && ls -al
+        run: echo "${{ secrets.VITE_GIPHY_API_KEY }}" > .env && ls -al && cat .env
 
       - name: Build
         run: pnpm build
