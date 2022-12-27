@@ -13,6 +13,8 @@ type CardProps = {
   amount: number
 }
 
+console.log(GIPHY_API_KEY)
+
 const gf = new GiphyFetch(GIPHY_API_KEY)
 
 const useGiphy = (keyword: string) => {
