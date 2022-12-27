@@ -18,7 +18,7 @@ const Navbar: FunctionComponent = () => {
     useContext(TransactionContext)
 
   return (
-    <nav className="w-full flex md:justify-center justify-between items-center p-4">
+    <nav className="w-full flex md:justify-center justify-between items-center p-4 pr-20 md:pl-20">
       <div className="md:flex-1 md:ml-5 flex-initial justify-center items-center">
         <img src={logo} alt="logo" className="w-48 cursor-pointer" />
       </div>
