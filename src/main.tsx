@@ -1,3 +1,4 @@
+import { inject } from '@vercel/analytics'
 import { render } from 'preact'
 
 import App from './app'
@@ -14,3 +15,4 @@ render(
 )
 
 reportWebVitals(sendToVercelAnalytics)
+inject()
