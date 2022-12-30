@@ -11,8 +11,8 @@ function getConnectionSpeed() {
 }
 
 export function sendToVercelAnalytics(metric: Metric) {
-  const analyticsId = process.env.VITE_VERCEL_ANALYTICS_ID
-  if (!analyticsId) {
+  const analyticsId = import.meta.env.VITE_VERCEL_ANALYTICS_ID
+  if (!analyticsId && !import.meta.env.PROD) {
     return
   }
 
