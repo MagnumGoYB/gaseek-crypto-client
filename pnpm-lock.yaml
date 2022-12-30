@@ -36,6 +36,7 @@ specifiers:
   typescript: ^4.9.3
   vite: ^4.0.0
   vite-plugin-eslint: ^1.8.1
+  web-vitals: ^3.1.0
 
 dependencies:
   '@giphy/js-fetch-api': 4.7.1
@@ -44,6 +45,7 @@ dependencies:
   ethers: 5.7.2
   preact: 10.11.3
   react-icons: 4.7.1_react@18.2.0
+  web-vitals: 3.1.0
 
 devDependencies:
   '@breathelife/prettier-plugin-sort-imports': 3.0.5_prettier@2.8.1
@@ -4914,6 +4916,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /web-vitals/3.1.0:
+    resolution: {integrity: sha512-zCeQ+bOjWjJbXv5ZL0r8Py3XP2doCQMZXNKlBGfUjPAVZWokApdeF/kFlK1peuKlCt8sL9TFkKzyXE9/cmNJQA==}
+    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}

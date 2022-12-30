@@ -17,7 +17,8 @@
     "classnames": "^2.3.2",
     "ethers": "^5.7.2",
     "preact": "^10.11.3",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "web-vitals": "^3.1.0"
   },
   "devDependencies": {
     "@breathelife/prettier-plugin-sort-imports": "^3.0.5",
